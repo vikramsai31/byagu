@@ -1,0 +1,69 @@
+<h1>Listing orders</h1>
+
+<table>
+  <tr>
+    <th>Cart</th>
+    <th>Shipping first name</th>
+    <th>Shipping last name</th>
+    <th>Shipping middle name</th>
+    <th>Shipping address1</th>
+    <th>Shipping address2</th>
+    <th>Shipping city</th>
+    <th>Shipping state</th>
+    <th>Shipping zip</th>
+    <th>Billing first name</th>
+    <th>Billing last name</th>
+    <th>Billing middle name</th>
+    <th>Billing address1</th>
+    <th>Billing address2</th>
+    <th>Billing city</th>
+    <th>Billing state</th>
+    <th>Billing zip</th>
+    <th>Order no</th>
+    <th>Transaction status</th>
+    <th>Total</th>
+    <th>Shipping fee</th>
+    <th>Total</th>
+    <th>Shipping fee</th>
+    <th>Sales tax</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @orders.each do |order| %>
+  <tr>
+    <td><%= order.cart_id %></td>
+    <td><%= order.shipping_first_name %></td>
+    <td><%= order.shipping_last_name %></td>
+    <td><%= order.shipping_middle_name %></td>
+    <td><%= order.shipping_address1 %></td>
+    <td><%= order.shipping_address2 %></td>
+    <td><%= order.shipping_city %></td>
+    <td><%= order.shipping_state %></td>
+    <td><%= order.shipping_zip %></td>
+    <td><%= order.billing_first_name %></td>
+    <td><%= order.billing_last_name %></td>
+    <td><%= order.billing_middle_name %></td>
+    <td><%= order.billing_address1 %></td>
+    <td><%= order.billing_address2 %></td>
+    <td><%= order.billing_city %></td>
+    <td><%= order.billing_state %></td>
+    <td><%= order.billing_zip %></td>
+    <td><%= order.order_no %></td>
+    <td><%= order.transaction_status %></td>
+    <td><%= order.total %></td>
+    <td><%= order.shipping_fee %></td>
+    <td><%= order.total %></td>
+    <td><%= order.shipping_fee %></td>
+    <td><%= order.sales_tax %></td>
+    <td><%= link_to 'Show', order %></td>
+    <td><%= link_to 'Edit', edit_order_path(order) %></td>
+    <td><%= link_to 'Destroy', order, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Order', new_order_path %>

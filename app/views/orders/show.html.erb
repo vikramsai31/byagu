@@ -1,0 +1,125 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cart:</b>
+  <%= @order.cart_id %>
+</p>
+
+<p>
+  <b>Shipping first name:</b>
+  <%= @order.shipping_first_name %>
+</p>
+
+<p>
+  <b>Shipping last name:</b>
+  <%= @order.shipping_last_name %>
+</p>
+
+<p>
+  <b>Shipping middle name:</b>
+  <%= @order.shipping_middle_name %>
+</p>
+
+<p>
+  <b>Shipping address1:</b>
+  <%= @order.shipping_address1 %>
+</p>
+
+<p>
+  <b>Shipping address2:</b>
+  <%= @order.shipping_address2 %>
+</p>
+
+<p>
+  <b>Shipping city:</b>
+  <%= @order.shipping_city %>
+</p>
+
+<p>
+  <b>Shipping state:</b>
+  <%= @order.shipping_state %>
+</p>
+
+<p>
+  <b>Shipping zip:</b>
+  <%= @order.shipping_zip %>
+</p>
+
+<p>
+  <b>Billing first name:</b>
+  <%= @order.billing_first_name %>
+</p>
+
+<p>
+  <b>Billing last name:</b>
+  <%= @order.billing_last_name %>
+</p>
+
+<p>
+  <b>Billing middle name:</b>
+  <%= @order.billing_middle_name %>
+</p>
+
+<p>
+  <b>Billing address1:</b>
+  <%= @order.billing_address1 %>
+</p>
+
+<p>
+  <b>Billing address2:</b>
+  <%= @order.billing_address2 %>
+</p>
+
+<p>
+  <b>Billing city:</b>
+  <%= @order.billing_city %>
+</p>
+
+<p>
+  <b>Billing state:</b>
+  <%= @order.billing_state %>
+</p>
+
+<p>
+  <b>Billing zip:</b>
+  <%= @order.billing_zip %>
+</p>
+
+<p>
+  <b>Order no:</b>
+  <%= @order.order_no %>
+</p>
+
+<p>
+  <b>Transaction status:</b>
+  <%= @order.transaction_status %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @order.total %>
+</p>
+
+<p>
+  <b>Shipping fee:</b>
+  <%= @order.shipping_fee %>
+</p>
+
+<p>
+  <b>Total:</b>
+  <%= @order.total %>
+</p>
+
+<p>
+  <b>Shipping fee:</b>
+  <%= @order.shipping_fee %>
+</p>
+
+<p>
+  <b>Sales tax:</b>
+  <%= @order.sales_tax %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

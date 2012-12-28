@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  cart_id: 1
+  shipping_first_name: MyString
+  shipping_last_name: MyString
+  shipping_middle_name: MyString
+  shipping_address1: MyString
+  shipping_address2: MyString
+  shipping_city: MyString
+  shipping_state: MyString
+  shipping_zip: 1
+  billing_first_name: MyString
+  billing_last_name: MyString
+  billing_middle_name: MyString
+  billing_address1: MyString
+  billing_address2: MyString
+  billing_city: MyString
+  billing_state: MyString
+  billing_zip: 1
+  order_no: MyString
+  transaction_status: MyString
+  total: 1
+  shipping_fee: 1
+  total: 1
+  shipping_fee: 1
+  sales_tax: 1
+
+two:
+  cart_id: 1
+  shipping_first_name: MyString
+  shipping_last_name: MyString
+  shipping_middle_name: MyString
+  shipping_address1: MyString
+  shipping_address2: MyString
+  shipping_city: MyString
+  shipping_state: MyString
+  shipping_zip: 1
+  billing_first_name: MyString
+  billing_last_name: MyString
+  billing_middle_name: MyString
+  billing_address1: MyString
+  billing_address2: MyString
+  billing_city: MyString
+  billing_state: MyString
+  billing_zip: 1
+  order_no: MyString
+  transaction_status: MyString
+  total: 1
+  shipping_fee: 1
+  total: 1
+  shipping_fee: 1
+  sales_tax: 1
