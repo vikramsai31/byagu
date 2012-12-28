@@ -34,18 +34,22 @@ class LineItemsController < ApplicationController
 
   # GET /line_items/1/edit
   def edit
-    @line_item = LineItem.find(params[:id])
+    @cart = current_cart
+    @line_item = @cart.line_items.find_by_cart_id(params[:id])
   end
 
   # POST /line_items
   # POST /line_items.json
   def create
-    @line_item = LineItem.new(params[:line_item])
+    @product = Product.find(params[:product_id])
+    @cart = current_cart
+    #@line_item = @cart.line_items.build(:product_id => @product.id)
+    @line_item = @cart.add_product(@product.id)
 
     respond_to do |format|
       if @line_item.save
-        format.html { redirect_to @line_item, notice: 'Line item was successfully created.' }
-        format.json { render json: @line_item, status: :created, location: @line_item }
+        format.html { redirect_to root_path, notice: 'Line item was successfully created.' }
+        
       else
         format.html { render action: "new" }
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
@@ -60,10 +64,10 @@ class LineItemsController < ApplicationController
 
     respond_to do |format|
       if @line_item.update_attributes(params[:line_item])
-        format.html { redirect_to @line_item, notice: 'Line item was successfully updated.' }
+        format.html { redirect_to cart_path(session[:cart_id]), notice: 'Your cart was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { redirect_to cart_path(session[:cart_id]), notice: 'Something went wrong was please startover.'  }
         format.json { render json: @line_item.errors, status: :unprocessable_entity }
       end
     end
@@ -76,7 +80,7 @@ class LineItemsController < ApplicationController
     @line_item.destroy
 
     respond_to do |format|
-      format.html { redirect_to line_items_url }
+      format.html { redirect_to cart_path(session[:cart_id]) }
       format.json { head :no_content }
     end
   end

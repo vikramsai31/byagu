@@ -1,5 +1,20 @@
 <p id="notice"><%= notice %></p>
+<span> <%= link_to 'Check Out',new_payment_path %></span>
+<table>
+	<tr>
+		<th> ID </th>
+		<th>Name </th>
+		<th>Unit Price </th>
+		<th> Quantity </th>
+		<th>  Price </th>
+		<th></th>
+	</tr>
+
+<%= render :partial => 'line_item' %>
+
+</table>
+<span> Total </span><%=  number_to_currency(Cart.get_total(session[:cart_id]))%>
 
 
-<%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+	
+

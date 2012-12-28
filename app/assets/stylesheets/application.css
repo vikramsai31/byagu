@@ -11,3 +11,13 @@
  *= require_self
  *= require_tree .
 */
+.container ul li{float:left;
+background:none;
+border:0;
+margin:0;
+outline:0;
+display:inline;
+list-style-type:none;
+vertical-align:middle;
+padding-left:20px;
+margin-top:0}

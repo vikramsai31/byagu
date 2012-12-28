@@ -6,7 +6,7 @@ gem 'rails', '3.2.3'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-gem 'pg'
+
 gem 'annotate'
 
 
@@ -25,9 +25,12 @@ end
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem 'jquery-rails'
+gem 'annotate'
 
 # To use ActiveModel has_secure_password
  gem 'bcrypt-ruby', '~> 3.0.0'
+ gem 'rake', '~> 10.0.1'
+ gem 'stripe'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'

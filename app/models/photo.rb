@@ -1,3 +1,17 @@
+# == Schema Information
+#
+# Table name: photos
+#
+#  id                :integer          not null, primary key
+#  product_id        :integer
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  data_file_name    :string(255)
+#  data_content_type :string(255)
+#  data_file_size    :integer
+#  data_updated_at   :datetime
+#
+
 class Photo < ActiveRecord::Base
 	belongs_to :product
 	has_attached_file :data, :styles => { :thumb => "100x100#", :medium => "300x300#", :large => "600x600>" },

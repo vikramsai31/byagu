@@ -1,4 +1,8 @@
 Byagu::Application.routes.draw do
+  resources :users
+
+  resources :orders
+
   resources :line_items
 
   resources :carts
@@ -7,6 +11,9 @@ Byagu::Application.routes.draw do
     resources :photos
   end
 
+  resources :payments
+   match "/line_items/:id" => "line_items#update"
+   match "carts/:id" => "carts#show"
   get "home/index"
 
   # The priority is based upon order of creation:

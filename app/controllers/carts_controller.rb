@@ -13,7 +13,11 @@ class CartsController < ApplicationController
   # GET /carts/1
   # GET /carts/1.json
   def show
-    @cart = Cart.find(params[:id])
+
+    #@cart = Cart.find(params[:id])
+    cid = current_cart 
+    @cart = Cart.find(cid)
+    @lineitem = @cart.line_items
 
     respond_to do |format|
       format.html # show.html.erb
